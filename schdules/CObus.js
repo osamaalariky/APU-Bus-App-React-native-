@@ -1,0 +1,139 @@
+import React, { Component } from 'react';
+import {
+  StyleSheet,
+  Text,
+  useColorScheme,
+  View,
+  Image,
+  Alert, 
+  Dimensions,
+  TouchableOpacity,
+  ScrollView
+  } from 'react-native';
+  import {APIITloc} from '../Data/APIITData';
+  import profile from '../screens/profile';
+  import { useNavigation } from '@react-navigation/native';
+  import { createStackNavigator } from '@react-navigation/stack';
+import { timing } from '../Data/timing';
+
+  export default class CObus extends Component {
+    showArrayItem = (item) => {
+       
+      Alert.alert(item, screenName);
+     
+        
+   
+    }
+   
+    render(){
+   
+      return (
+   
+        <View style={styles.container}>
+            <Text style={styles.titleCard}>Choose bus time</Text>
+     
+   
+            {
+              timing.map((item, key) => (
+                
+                  <View style={{ paddingBottom:44}}>
+                      
+              
+                 
+   
+                
+   
+    
+    <View style={styles.cardpress}>
+      <TouchableOpacity 
+     onPress={() => this.props.navigation.navigate(item.screenName)}
+      style={[styles.cardpress, {
+   
+       borderColor: '#25282c',
+       borderWidth: 9
+     }]}>
+         <View>
+        <Text style={[styles.cardtext, {
+                     color: '#fff5ee',
+                   }]}>{item.time}</Text>
+                   </View>
+      </TouchableOpacity>
+    </View>
+
+               
+            </View>
+              ))
+            }
+   
+            
+         
+          
+          </View>
+       
+      );
+    }};
+
+
+  const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+    margin: 1,
+    borderWidth:0,
+    backgroundColor:'#25282c',
+    borderTopColor: "#B0B0B000",
+    borderBottomColor: "#B0B0B000",
+    borderTopWidth: 0,
+    borderBottomWidth: 0,
+    paddingTop: (Platform.OS) === 'android' ? 5 : 0,
+    
+    },
+    map:{
+      ...StyleSheet.absoluteFillObject
+    },
+    carousel: {
+      position: 'absolute',
+      bottom: 0,
+      marginBottom: 48
+    },
+    picCard: {
+      backgroundColor: '#4682b4',
+      height : 300,
+      width: 390,
+      
+      padding: 24,
+      borderRadius: 24
+    },
+    titleCard: {
+      fontSize: 28,
+      alignSelf: 'center',
+      paddingBottom:44,
+      color: '#fff5ee'
+    },
+    swipeCard: {
+      height: 190,
+      width: 390,
+      bottom: 0,
+      position: 'absolute',
+      borderBottomRightRadius: 24,
+      borderBottomLeftRadius: 24
+    },
+    cardpress: {
+      width: '100%',
+      height: 60,
+      borderWidth: 1,
+      padding:3,
+      backgroundColor:'#778899',
+      justifyContent: 'center',
+      alignItems: 'center',
+      borderRadius: 30,
+      padding: 3,
+   
+      
+     
+  },
+  cardtext: {
+      fontSize: 20,
+      fontWeight: 'bold',
+      
+  }
+  })

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "975153096164",
+    "project_id": "ffosa-c717e",
+    "storage_bucket": "ffosa-c717e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:975153096164:android:effedfdf8043ffd832d3f1",
+        "android_client_info": {
+          "package_name": "com.ffosa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "975153096164-9i743t3eaoldbjk9jeupj8og18hlm4kn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyByg6FI-gQewelwXnz2CdVTR8JmsIvL7Lk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "975153096164-9i743t3eaoldbjk9jeupj8og18hlm4kn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
